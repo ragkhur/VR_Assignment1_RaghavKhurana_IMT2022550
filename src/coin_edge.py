@@ -41,9 +41,10 @@ circles = cv2.HoughCircles(
     maxRadius=140   
 )
 
-
+coin_count = 0
 if circles is not None:
     circles= np.uint16(np.around(circles))
+    coin_count = circles.shape[1]
     for i in circles[0,:]:
         cv2.circle(image, (i[0], i[1]), i[2], (0,255,0),2)
         cv2.circle(image, (i[0], i[1]), 2, (0,0,255), 3)
@@ -54,4 +55,5 @@ cv2.imwrite(output_image_path, image)
 cv2.imshow("Detected coins", image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+print(coin_count)
 exit()

@@ -84,3 +84,6 @@ for marker in unique_markers:
 cv2.imshow("Segmented Coins", segmented_image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+print(coin_count)
+exit()
