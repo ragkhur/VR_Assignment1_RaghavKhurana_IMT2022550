@@ -1,7 +1,24 @@
 import cv2
 import numpy as np
+import os
 
-image = cv2.imread("coins.jpg", cv2.IMREAD_COLOR)
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+images_dir = os.path.join(current_dir, '..', 'images')
+results_dir = os.path.join(current_dir, '..', 'results')
+
+input_image_name = "coins1.jpg"
+input_image_path = os.path.join(images_dir, input_image_name)
+
+output_image_name = "coints_with_edge_detection.jpeg"
+output_image_path = os.path.join(results_dir, output_image_name)
+
+image = cv2.imread(input_image_path, cv2.IMREAD_COLOR)
+if image is None:
+    print(f"Error: Could not load image {input_image_path}")
+    exit()
+
 
 gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
@@ -32,7 +49,7 @@ if circles is not None:
         cv2.circle(image, (i[0], i[1]), 2, (0,0,255), 3)
 
 
-cv2.imwrite("detected_coins.jpg", image)
+cv2.imwrite(output_image_path, image)
 
 cv2.imshow("Detected coins", image)
 cv2.waitKey(0)
