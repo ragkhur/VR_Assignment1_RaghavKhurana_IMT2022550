@@ -2,7 +2,7 @@
 
 ### Raghav Khurana - IMT2022550 
 
-## 📌 Overview  
+##  Overview  
 This repository contains solutions for Computer Vision Assignment 1, which consists of two main tasks:  
 1. *Coin Detection and Segmentation* –  Detecting, segmenting, and counting coins in an image using edge detection and watershed segmentation techniques.  
 2. *Image Stitching* – Creating a stitched panorama from multiple overlapping images using feature matching and homography estimation.  
@@ -11,35 +11,43 @@ All implementations are in *Python*.
 
 ---
 
-## 📂 Repository Structure  
+##  Repository Structure  
 
 
-VR_Assignment1_Himanshu_IMT2022584/
-│── Q1/                                         # Folder for Coin Detection and Segmentation
-│   │── coin_edge.py                           # Python script for coin edge detection and counting
-│   │── coin_segmentation.py                   # Python script for coin segmentation using watershed
-│   │── coins1.jpg                             # Input image for edge detection
-│   │── coins2.jpeg                            # Input image for segmentation
-│   │── coints_with_edge_detection.jpeg        # Output image with detected coins highlighted
-│   │── Segmented_coins.jpg                    # Output segmented coins image
-│   │── segmented_coin_*.jpg                    # Individual segmented coin images
-│
-│── Q2/                                         # Folder for Image Stitching
-│   │── stitch_panaroma.py                     # Python script for panorama stitching
-│   │── stitch_1.jpg                           # Input image 1 for stitching
-│   │── stitch_2.jpg                           # Input image 2 for stitching
-│   │── stitch_3.jpg                           # Input image 3 for stitching
-│   │── final_panorama.jpg                     # Output stitched panorama image
-│
-│── README.md                                   # Project documentation
-│── requirements.txt                            # Python package dependencies
-│── VR_Assignment1_Himanshu_IMT2584.pdf          # Final report in PDF format
-
+VR_Assignment1_RAGHAVKHURANA_IMT2022550/
+├── images                              #contains the input images
+│   ├── coins1.jpg
+│   ├── coins2.jpeg
+│   ├── stitch_1.jpg
+│   ├── stitch_2.jpg
+│   └── stitch_3.jpg
+├── results                             #contains the images resulting from the code outputs
+│   ├── Segmented_coins.jpg
+│   ├── coints_with_edge_detection.jpeg
+│   ├── detected_coins_with_edgedetection.jpg
+│   ├── final panaroma.jpeg
+│   ├── segmented_coin_1.jpg
+│   ├── segmented_coin_10.jpg
+│   ├── segmented_coin_11.jpg
+│   ├── segmented_coin_2.jpg
+│   ├── segmented_coin_3.jpg
+│   ├── segmented_coin_4.jpg
+│   ├── segmented_coin_5.jpg
+│   ├── segmented_coin_6.jpg
+│   ├── segmented_coin_7.jpg
+│   ├── segmented_coin_8.jpg
+│   └── segmented_coin_9.jpg
+└── src                                 #contains the code files for the assignment
+    ├── coin_edge.py
+    ├── coin_segmentation.py
+    ├── main.py
+    ├── stitch.py
+    └── stitch_panaroma.py
 
 
 ---
 
-## 🛠 Dependencies  
+##  Dependencies  
 Ensure the following Python packages are installed before running the scripts:  
 
 bash
@@ -49,10 +57,10 @@ pip install opencv-python numpy
 
 ---
 
-## 🔧 Execution Instructions  
+##  Execution Instructions  
 Run each script separately from the terminal or command prompt.  
 
-### *⿡ Coin Detection and Segmentation*  
+### * Coin Detection and Segmentation*  
 Navigate to the src folder and run:
 
 python coin_edge.py
@@ -75,7 +83,7 @@ python stitch_panaroma.py
 
 ---
 
-## 📊 Methodology  
+##  Methodology  
 
 ### *Part 1: Coin Detection and Segmentation*  
 #### 🔹 *Steps Followed:*  
